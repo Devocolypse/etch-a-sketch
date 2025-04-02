@@ -8,6 +8,9 @@ body {
 
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
 *,
@@ -42,4 +45,17 @@ body {
 .break {
   flex-basis: 100%;
   height: 0;
+}
+
+.newGridBtn {
+  padding: 20px 30px;
+  color: #fff;
+  background-color: #555;
+  border: 0;
+  border-radius: 5px;
+  margin-bottom: 50px;
+}
+
+.newGridBtn:active {
+  background-color: #2f2f2f;
 }

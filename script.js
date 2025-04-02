@@ -6,10 +6,6 @@ function displaySquares(squares) {
 
 // obj: create a function that creates number of squares < 100
 function createSquares(input = 16) {
-  if (input < 1 || input > 100) {
-    return alert('Number of squares must be between (inclusively) 1 and 100.');
-  }
-
   // temporary container for generated squares
   const container = document.createDocumentFragment();
 
@@ -37,4 +33,21 @@ function createSquares(input = 16) {
   displaySquares(container);
 }
 
-createSquares();
+// capture value from grid creation prompt and validate it
+function validateGridCreation(input) {
+  input = parseInt(input);
+
+  if (isNaN(input)) {
+    return alert('Input must be a number!');
+  } else if (input < 1 || input > 100) {
+    return alert('Number of squares must be between (inclusively) 1 and 100.');
+  }
+
+  createSquares(input);
+}
+
+const newGridBtn = document.querySelector('.newGridBtn');
+newGridBtn.addEventListener('click', () => {
+  const answer = prompt('How many squares per side do you want?', 16);
+  validateGridCreation(answer);
+});
