@@ -29,6 +29,7 @@ body {
   align-items: center;
   width: 950px;
   gap: 3px;
+  row-gap: 2px;
 }
 
 .square {
