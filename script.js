@@ -14,12 +14,19 @@ function createSquares(input = 16) {
   const container = document.createDocumentFragment();
 
   // loop until input * input number of squares are generated
-  input *= input;
-  for (let i = 0; i < input; i++) {
+  for (let i = 1; i <= input * input; i++) {
+    console.log(i, input);
     const square = document.createElement('div');
     square.classList.toggle('square');
 
     container.appendChild(square);
+
+    // break into new row every nth square, n = input
+    if (i % input === 0) {
+      const breaker = document.createElement('div');
+      breaker.classList.toggle('break');
+      container.appendChild(breaker);
+    }
   }
 
   displaySquares(container);
