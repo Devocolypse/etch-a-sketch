@@ -13,6 +13,8 @@ function createSquares(input = 16) {
   // temporary container for generated squares
   const container = document.createDocumentFragment();
 
+  // loop until input * input number of squares are generated
+  input *= input;
   for (let i = 0; i < input; i++) {
     const square = document.createElement('div');
     square.classList.toggle('square');
