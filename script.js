@@ -19,7 +19,10 @@ function createSquares(input = 16) {
     const square = document.createElement('div');
     square.classList.toggle('square');
 
-    square.addEventListener("mouseover", () => square.classList.add('colorChange'));
+    square.addEventListener('mouseover', () => {
+      const randomColor = '#' + (((1 << 24) * Math.random()) | 0).toString(16);
+      square.style.setProperty('--background-color', randomColor);
+    });
 
     container.appendChild(square);
 
