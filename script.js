@@ -19,6 +19,8 @@ function createSquares(input = 16) {
     const square = document.createElement('div');
     square.classList.toggle('square');
 
+    square.addEventListener("mouseover", () => square.classList.add('colorChange'));
+
     container.appendChild(square);
 
     // break into new row every nth square, n = input
