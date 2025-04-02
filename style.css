@@ -28,18 +28,16 @@ body {
 .squaresContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 950px;
-  gap: 3px;
-  row-gap: 2px;
+  justify-content: stretch;
+  width: 600px;
+  gap: 1px;
 }
 
 .square {
   --background-color: #555;
   background-color: var(--background-color);
   aspect-ratio: 1 / 1;
-  flex: 1 0 50px;
+  flex: 1;
 }
 
 .break {
