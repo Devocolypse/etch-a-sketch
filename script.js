@@ -1,7 +1,7 @@
 // obj: create a function that displays a number of squares
 function displaySquares(squares) {
   const squaresContainer = document.querySelector('.squaresContainer');
-  squaresContainer.appendChild(squares);
+  squaresContainer.replaceChildren(squares);
 }
 
 // obj: create a function that creates number of squares < 100
@@ -51,3 +51,5 @@ newGridBtn.addEventListener('click', () => {
   const answer = prompt('How many squares per side do you want?', 16);
   validateGridCreation(answer);
 });
+
+createSquares();
